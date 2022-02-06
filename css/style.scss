@@ -1,0 +1,108 @@
+:root {
+    --dark_cyan: hsl(185, 75%, 39%);
+    --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --dark_grayish_blue: hsl(227, 10%, 46%);
+    --dark_gray: hsl(0, 0%, 59%);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark_cyan);
+    background-image: url(../images/bg-pattern-bottom.svg),  url(../images/bg-pattern-top.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 50vw top 50vh, right 50vw bottom 50vh;
+}
+
+.flex{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 326px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px var(--dark_grayish_blue);
+    overflow: hidden;
+
+    &-header{
+        width: 100%;
+        display: block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid rgb(214, 214, 214);
+
+        &-img{
+            background-color: white;
+            border:5px solid rgb(255, 255, 255) ;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+        }
+
+        &-title{
+            margin-top: 1rem;
+            font-size: 2.5rem;
+
+            span {
+                color: var(--dark_gray);
+                font-weight: 600;
+                margin-left: 0.7rem;
+            }
+        }
+
+        &-text{
+            margin-top: 0rem;
+            color: var(--dark_gray);
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1.3rem;
+        padding-bottom: 2rem;
+
+        &-social{
+            text-align: center;
+
+            a{
+                color: black;
+                font-size: 3rem;
+                font-weight: 600;
+                padding: 2rem;
+                margin-bottom: 0px;
+                text-decoration: none;
+                cursor: pointer;
+
+                :hover{
+                    color: aqua;
+                    transform: scale(1.3);
+                }
+            }
+
+            p {
+                font-size: 1.1rem;
+                margin-top: 5px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
